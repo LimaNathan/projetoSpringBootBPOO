@@ -9,6 +9,14 @@ public class Category extends NamedEnity implements Serializable{
 
     private static final long serialVersionUID = 1L;
     
-    
+    public Category(){
+
+
+    }
+
+    public Category(String name){
+
+        this.setName(name);
+    }
 
 }
