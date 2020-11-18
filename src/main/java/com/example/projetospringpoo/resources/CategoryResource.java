@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CategoryResource {
 
     @GetMapping
-    public String test(){
+    public String test(){               
 
         return "REST Funcionando";
     }
