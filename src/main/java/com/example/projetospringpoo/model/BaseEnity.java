@@ -2,11 +2,23 @@ package com.example.projetospringpoo.model;
 
 import java.io.Serializable;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+//Anotação para interpretar esta classe como super
+@MappedSuperclass
 public class BaseEnity implements Serializable{
 
     private static final long serialVersionUID = 1L;
-    
 
+    
+    //informa na tabela do banco de dados que esse é o id do objeto
+    @Id 
+    //Gerando automaticamento os valores de id
+    //com a estratégia GenerationType.IDENTITY
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     public Integer getId() {
@@ -17,8 +29,6 @@ public class BaseEnity implements Serializable{
         this.id = id;
     }
 
-
-    
     @Override
     public int hashCode() {
         final int prime = 31;
