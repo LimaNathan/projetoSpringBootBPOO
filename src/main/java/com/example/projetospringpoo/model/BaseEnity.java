@@ -9,15 +9,14 @@ import javax.persistence.MappedSuperclass;
 
 //Anotação para interpretar esta classe como super
 @MappedSuperclass
-public class BaseEnity implements Serializable{
+public class BaseEnity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    
-    //informa na tabela do banco de dados que esse é o id do objeto
-    @Id 
-    //Gerando automaticamento os valores de id
-    //com a estratégia GenerationType.IDENTITY
+    // informa na tabela do banco de dados que esse é o id do objeto
+    @Id
+    // Gerando automaticamento os valores de id
+    // com a estratégia GenerationType.IDENTITY
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -37,7 +36,6 @@ public class BaseEnity implements Serializable{
         return result;
     }
 
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -55,5 +53,4 @@ public class BaseEnity implements Serializable{
         return true;
     }
 
-    
 }

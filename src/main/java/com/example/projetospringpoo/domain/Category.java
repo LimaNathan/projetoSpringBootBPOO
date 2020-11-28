@@ -8,19 +8,20 @@ import javax.persistence.ManyToMany;
 
 import com.example.projetospringpoo.model.NamedEnity;
 
-@Entity // Informando que essa classe é uma entidade e precisa ser mantida no banco de dados
-public class Category extends NamedEnity{
+@Entity // Informando que essa classe é uma entidade e precisa ser mantida no banco de
+        // dados
+public class Category extends NamedEnity {
     private static final long serialVersionUID = 1L;
 
-    @ManyToMany(mappedBy = "categorys")// informando ao mapeamento muitos para muitos que ele já foi instanciando com o nome "Categorys"
+    @ManyToMany(mappedBy = "categorys") // informando ao mapeamento muitos para muitos que ele já foi instanciando com o
+                                        // nome "Categorys"
     private List<Product> products = new ArrayList<>();
 
-    public Category(){
-
+    public Category() {
 
     }
 
-    public Category(String name){
+    public Category(String name) {
 
         this.setName(name);
     }
